@@ -1435,7 +1435,7 @@ public class Form1 : Form
         string toolPath = Path.Combine(baseDir, "win-x64", "idevicediagnostics.exe");
         string cmd = "\"" + toolPath + "\" restart";
         int waitSeconds = IsA8WithIos103() ? 420 : 90;
-        if (waitSeconds == 300)
+        if (waitSeconds == 420)
             AddLog("A8 + iOS 10.3.x detected: extending reboot wait to 7 minutes", Color.Orange);
         if ((await RunCommandAsyncReturn(cmd)).Contains("Restarting device"))
         {
